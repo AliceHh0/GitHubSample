@@ -38,6 +38,8 @@
  * 
  * ctrl+shift+insert to paste in Git Bash
  * 
+ * 
+ * #################### To Initialize GITHUB ###########################
  * Steps:
  * 1. mkdir git_main_file > make a new directory
  * 2. go to the newly created directory
@@ -45,12 +47,20 @@
  * 4. create a gitignore file to ignore certain visual studio file
  * 5. git add. to add all files (it will ignore files listed in git ignore)
  * 6. git commit -m "Commit message"
- * 7. Connect local repo to online Github repo (make sure working tree clean, no staging files)
+ * 7. Connect local repo to online Github repo (make sure working tree clean, no staging files), by creating a new repo on Github first
  * 8. git remote add origin https://github.com/AliceHh0/git_practice.git to add local repo to the online repo
  * 9. git branch -M main
  * 10. git push -u origin main
  * 
  * 
+ * #################### THE CORRECT WAY TO COOP GITHUB ###########################
+ * Steps:
+ * 1. Create a branch
+ * 2. Commit changes
+ * 3. Open Pull Request
+ * 4. Review Pull Request
+ * 5. Merge
+ * 6. Delete the non active branch if needed, to keep it clean
  * 
  * 
  * 
