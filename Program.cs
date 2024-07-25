@@ -28,7 +28,34 @@
  *           commitSHAnumber : remove file from staging area and back to this specific commit
  * git stash : temporarily stash work at working directory, and then use {git stash pop} to retrieve back, can store multiple
  * git stash list : to see git stash
+ * git branch : to check which branch im on
+ * git branch newbranchname : to create a new branch
+ *            -d branchname : to delete this branch , already been merged to main
+ *            -D branchname : delete branch that have not been merged to main
+ * git merge branchname : merge branchname to the current branch u are in (fast forward merge=no conflict , merge conflict what to do???)
+ * git remote -v : to get the list of remote origin of the current repo
  * 
+ * 
+ * 
+ *  #################### MERGE CONFLICT ###########################
+ *  it happens when the branch that u created from main, and u wanna merge back, but before that the main branch ady got changes!!
+ *  
+ *  Example Warning: CONFLICT (content): Merge conflict in resumé.txt
+ *  Automatic merge failed; fix conflicts and then commit the result.
+ *  
+ *  <<<<<<< HEAD (This symbol <<<< indicates the master/original version of the file)
+ *  -Engage in swordfights and professional pirates (The text in question)
+ *  ======= (this separates between file version)
+ *  -Engage in swordfights and professional pirates such as Smee.
+ *  >>>>>>> fencing ( this indicate the another version)
+ *  
+ *  To fix this:
+ *  remove all the extra markings and only keep the version of code that u want
+ *  git add
+ *  git commit back
+ *  
+ *  
+ *  
  * 
  * 
  * #################### Useful Tips ###########################
@@ -57,16 +84,42 @@
  * Steps:
  * 1. Create a branch
  * 2. Commit changes
+ * 2.1 git push origin branchnameyouwanttopush
  * 3. Open Pull Request
  * 4. Review Pull Request
  * 5. Merge
  * 6. Delete the non active branch if needed, to keep it clean
  * 
  * 
+ *  * #################### THE CORRECT WAY TO GET FROM GITHUB ###########################
+ * Steps:
+ * 1. git clone repolink newreponame 
+ * 2. git fetch - to get changes from remote back to your local repo - it does not direct change /merge changes, but bring it to a remote branch (origin/master branch) NOT (local/master branch)
+ * 3. git merge origin/master
  * 
  * 
  * 
  * 
+ * 
+ * #################### MARKDOWN - A TEXT BASED FORMAT FOR HTML ###########################
+ * cheatsheet : https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+ * 
+ * .markdown
+ * .md
+ * 
+ * need an application/processor/parser to process markdown file to html file
+ * 
+ * # - Heading 1
+ * ## - Heading 2
+ * ### - Heading 3
+ * * - Italics
+ * ** - Bold
+ * ~ - Strikethrough
+ * *,+,-, - Unordered lists
+ * 1.
+ * 2.
+ * 3.
+ * 4..n - Ordered Lists
  * 
  * 
  * 
