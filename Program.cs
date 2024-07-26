@@ -75,7 +75,7 @@
  * 5. git add. to add all files (it will ignore files listed in git ignore)
  * 6. git commit -m "Commit message"
  * 7. Connect local repo to online Github repo (make sure working tree clean, no staging files), by creating a new repo on Github first
- * 8. git remote add origin https://github.com/AliceHh0/git_practice.git to add local repo to the online repo
+ * 8. git remote add origin https://github.com/AliceHh0/git_practice.stugit to add local repo to the online repo
  * 9. git branch -M main
  * 10. git push -u origin main
  * 
@@ -94,7 +94,7 @@
  *  * #################### THE CORRECT WAY TO GET FROM GITHUB ###########################
  * Steps:
  * 1. git clone repolink newreponame 
- * 2. git fetch - to get changes from remote back to your local repo - it does not direct change /merge changes, but bring it to a remote branch (origin/master branch) NOT (local/master branch)
+ * 2. git fetch - to get changes (latest commit) from remote back to your local repo - it does not direct change /merge changes, but bring it to a remote branch (origin/master branch) NOT (local/master branch)
  * 3. git merge origin/master
  * 
  * 
