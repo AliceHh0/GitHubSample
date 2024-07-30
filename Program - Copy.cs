@@ -12,7 +12,7 @@
  *         .  : stage all except ignored
  *         -A : stage all including subdirectories
  *         filename1 filename2 : stage specific files
- *         
+ * git mv oldfilename newfilename : rename = remove oldfile, git add newfile     
  * git status
  * git diff : to check difference in version (+ is the newly added changes)
  * git commit -m "text" : -m to add messages for commit action
