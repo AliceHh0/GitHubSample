@@ -3,7 +3,7 @@
  * Working Directory > Staging Area(will be tracked) > Github Repo
  * git init > git add > git commit
  * 
- * 
+ * You can use FORK to copy from other project to ur own repo in github
  * 
  * #################### List of Commands ###########################
  * git init
@@ -32,8 +32,12 @@
  * git branch newbranchname : to create a new branch
  *            -d branchname : to delete this branch , already been merged to main
  *            -D branchname : delete branch that have not been merged to main
+ *            -M newbranchname :  force rename the current branch to new branch name
+ * git checkout -b branchname : to change to this branch
  * git merge branchname : merge branchname to the current branch u are in (fast forward merge=no conflict , merge conflict what to do???)
  * git remote -v : to get the list of remote origin of the current repo
+ * git remote add upstream linkofparentrepo : when we first FORK repo into our github, we gonna git clone to our local as usual, and then we need to set upstream back to parent repo to still get updates from it.
+ * git fetch upstream : to get updates from the upstream repo that we just updated
  * 
  * 
  * 
@@ -66,38 +70,56 @@
  * ctrl+shift+insert to paste in Git Bash
  * 
  * 
- * #################### To Initialize GITHUB ###########################
- * Steps:
- * 1. mkdir git_main_file > make a new directory
- * 2. go to the newly created directory
- * 3. git init
- * 4. create a gitignore file to ignore certain visual studio file
- * 5. git add. to add all files (it will ignore files listed in git ignore)
- * 6. git commit -m "Commit message"
- * 7. Connect local repo to online Github repo (make sure working tree clean, no staging files), by creating a new repo on Github first
- * 8. git remote add origin https://github.com/AliceHh0/git_practice.stugit to add local repo to the online repo
- * 9. git branch -M main
- * 10. git push -u origin main
  * 
- * 
- * #################### THE CORRECT WAY TO COOP GITHUB ###########################
+ * #################### THE CORRECT WAY TO WORK WITH GITHUB ###########################
  * Steps:
- * 1. Create a branch
+ * 1. Create a branch 
  * 2. Commit changes
- * 2.1 git push origin branchnameyouwanttopush
  * 3. Open Pull Request
  * 4. Review Pull Request
  * 5. Merge
  * 6. Delete the non active branch if needed, to keep it clean
  * 
+ *
  * 
- *  * #################### THE CORRECT WAY TO GET FROM GITHUB ###########################
+ * 
+ * 
+ * 
+ * #################### TO SETUP WHOLE GITHUB PROCESS ###########################
  * Steps:
- * 1. git clone repolink newreponame 
- * 2. git fetch - to get changes (latest commit) from remote back to your local repo - it does not direct change /merge changes, but bring it to a remote branch (origin/master branch) NOT (local/master branch)
- * 3. git merge origin/master
+ * 1. Make a new directory
+ *        1.0 mkdir git_main_file using cmd
+ *        1.1 manually create file in file explorer
+ * 2. Go to the newly created directory in cmd
+ * 3. git init
+ * 4. create a gitignore file to ignore certain visual studio file 
+ * 5. git add. to add all files 
+ * 6. git commit -m "Commit message"
+ * 7. Create a new repo on Github first (make sure local working tree clean, no staging files)
+ * 8. git remote add origin [github_repo_link] to link a remote repo to ur local repo and rename it as origin,and next time can refer it as origin
+ * 9. git push -u origin main :  push main branch to origin and set up tracking between remote main and local main,
+ *                               so next time git push and git pull auto know is between these two branch
+ * 10. Submit a pull request
+ * 11. Approve and merge the code in pull request into main branch
+ *                               
+ *                               
+ * Steps:
+ * 1. fork the public repo to ur own repo (Optional)
+ * 2. git clone repolink newreponame(optional) : to clone into ur local
+ * 3. cd to your local repo
+ * 4. git fetch : to get changes (latest commit) from remote back to your local repo - it does not direct change /merge changes, 
+ *                but update at origin/main not local/main
+ * 5. git merge origin/main : merge origin main to local main
  * 
  * 
+ * 
+ * #################### .gitignorefile ###########################
+ * *.html means ignore all files with .html  extension
+ * example* means ignore all files start with example
+ * !test.html - will only do exception
+ * (add file path or directoryfoldername/ for whole directory - not file name ya)
+ * index.[a-i]* - will ignore index.html but not index.js as j is not within a-i
+ * **/temp/*.log  - will ignore.log folder inside all temp folder directory
  * 
  * 
  * 
